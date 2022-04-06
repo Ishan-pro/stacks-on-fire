@@ -1,12 +1,13 @@
 module.exports = {
   content: [
-    
-    './index.html',
-    './src/components/*.{jsx,ts,js}',
+    './src/**/*.html',
+    './src/**/*.ts',
+    './src/**/*.tsx',
   ],
-
   theme: {
-    extend: {},
+    extend: {
+      
+    },
   },
   plugins: [],
 }
