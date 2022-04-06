@@ -1,0 +1,4 @@
+api/migrations
+api/__pycache__
+posts/migrations
+posts/__pycache__
