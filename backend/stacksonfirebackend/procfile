@@ -1,1 +1,0 @@
-web: gunicorn stacksonfirebackend.wsgi --log-file -
