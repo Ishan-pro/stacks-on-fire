@@ -14,11 +14,13 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-y0@(utxb2jcnmsf3pvs4k@6q=o_biog(w340-+0elvewp1wcch'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
 
-ALLOWED_HOSTS = [
-    'stacksonfirebackend.herokuapp.com'
-]
+DEBUG = config('DEBUG', default=True, cast=bool)
+
+
+
+ALLOWED_HOSTS = ['stacksonfirebackend.herokuapp.com']
+
 
 
 # Application definition
@@ -137,5 +139,5 @@ CORS_ALLOWED_ORIGINS = [
 ]
 
 SECRET_KEY = config('SECRET_KEY')
-DEBUG = config('DEBUG', default=False, cast=bool)
-DATABASES = { 'default': dj_database_url.config( default=config('DATABASE_URL') )}
+if DEBUG==False:
+    DATABASES = { 'default': dj_database_url.config( default=config('DATABASE_URL') )}
