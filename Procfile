@@ -1,1 +1,1 @@
-web: gunicorn backend.stacksonfirebackend.stacksonfirebackend.wsgi --log-file -
+web: gunicorn backend.stacksonfirebackend.wsgi --log-file -
