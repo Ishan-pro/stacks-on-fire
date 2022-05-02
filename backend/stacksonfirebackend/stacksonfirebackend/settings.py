@@ -14,6 +14,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 # SECURITY WARNING: don't run with debug turned on in production!
 
+<<<<<<< Updated upstream
 DEBUG = config('DEBUG', default=True, cast=bool)
 
 
@@ -22,6 +23,12 @@ ALLOWED_HOSTS = ['stacksonfirebackend.herokuapp.com']
 
 if DEBUG==True:
     ALLOWED_HOSTS=['127.0.0.1']
+=======
+
+if "SECRET_KEY" in os.environ:
+    SECRET_KEY = os.environ['SECRET_KEY']
+    DEBUG = False
+>>>>>>> Stashed changes
 
 
 
