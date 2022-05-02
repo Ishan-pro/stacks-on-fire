@@ -1,1 +1,1 @@
-web: gunicorn backend.stacksonfirebackend.wsgi --log-file -
+web: python manage.py makemigrations && python manage.py migrate && gunicorn backend.stacksonfirebackend.wsgi --log-file -
