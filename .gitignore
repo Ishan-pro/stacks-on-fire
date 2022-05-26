@@ -1,2 +1,3 @@
 backend/stacksonfireenv
 backend/stacksonfirebackend/.env
+backend/stacksonfirebackend/staticfiles
